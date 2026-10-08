@@ -19,7 +19,7 @@ jobs:
       - name: Reconstruct Android project
         shell: bash
         run: |
-          cat source/DiscordEmojiStickerMaker.zip.b64.part00 source/DiscordEmojiStickerMaker.zip.b64.part01 | base64 --decode > DiscordEmojiStickerMaker.zip
+          cat source/verified.part00 source/verified.part01 source/verified.part02 source/verified.part03 | base64 --decode > DiscordEmojiStickerMaker.zip
           echo "5c24501c99e7dc7bf47b29c9e7ec6b93c880d5d4a5515011889e976007b988a5  DiscordEmojiStickerMaker.zip" | sha256sum -c -
           unzip -q DiscordEmojiStickerMaker.zip
 
